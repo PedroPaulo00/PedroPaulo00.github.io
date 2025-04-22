@@ -1,7 +1,6 @@
 .body{
-    background-image: url(images/background.png);
-    background-size: 100%;
-    width: 100%;    
+    background-color: black;
+    width: 99%;    
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
@@ -11,15 +10,17 @@
     background-image: url(images/background_h2.png);
     background-size: no repeat;
     background-size: cover;
-    box-sizing: content-box;
+    box-sizing:content-box;
     width: 100%;
-    border: 2px solid rgb(190, 146, 231);
+    height: 280px;
+    border: 2px solid  rgb(146, 162, 231);
 }
 .h1{
     color: white;
 }
 .profile{
-    width: 180px;
+    width: 260px;
+    height: 260px;
     float: left;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -32,7 +33,7 @@
         display: inline-block;
         color: white;
         text-align: center;
-        background-image: url(images/background_h2.png);
+        background-image: url(images/fundo-box.png);
         background-repeat: no-repeat;
         background-size: cover;
 }
@@ -51,12 +52,12 @@ a:active{
 }
 
 .hr{
-    color: rgb(190, 146, 231);
+    color:  rgb(146, 162, 231);
 }
 .sidestyle{
     float: right;
     width: 35%;
-    border-left: 2px solid rgb(190, 146, 231);
+    border-left: 2px solid  rgb(146, 162, 231);
     padding-left: 50px;
 }
 .main{
@@ -79,7 +80,7 @@ a:active{
     margin-right: 30px;
 }
 .strong{
-    color: rgb(190, 146, 231);
+    color: rgb(146, 162, 231);
 }
 .logo-header{
     width: 70px;
@@ -90,4 +91,9 @@ a:active{
 }
 .foot{
     text-align: center;
+}
+.pedro{
+    font-size: 60px;
+    margin-top: 20px;
+    font-family: C:\Users\Usuario\Documents\DESENVOLVIMENTO\CURRÍCULO\assets\Valorax-lg25V.otf;
 }
