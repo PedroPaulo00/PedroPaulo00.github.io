@@ -7,8 +7,8 @@
     text-align: justify;
 }
 .header{
-    background-image: url(images/background_h2.png);
-    background-size: no repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background_h2.png);
+    background-repeat: no repeat;
     background-size: cover;
     box-sizing:content-box;
     width: 100%;
