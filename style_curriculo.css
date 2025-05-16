@@ -92,7 +92,15 @@ a:active{
 .foot{
     text-align: center;
 }
-.pedro{
+
+@font-face {
+    font-family: 'Kosmo';
+    src: url('assets/ST-Kosmolet-Futurism.otf') format('opentype'); /* Sem ../ */
+}
+
+.pedro {
+    font-family: 'Kosmo', sans-serif;
     font-size: 60px;
     margin-top: 20px;
+    letter-spacing: 3px; /* Menos espaçamento */
 }
