@@ -46,7 +46,6 @@
 
     </div>
 
-     <!-- Áudio -->
   <audio id="background-audio" autoplay loop playsinline>
     <source src="sounds/HINO DO PALMEIRAS.mp3" type="audio/mp3">
     <source src="imgs/background-music.ogg" type="audio/ogg">
@@ -57,10 +56,8 @@
     document.addEventListener('DOMContentLoaded', () => {
       const audio = document.getElementById('background-audio');
 
-      // Inicia o áudio mudo (aceito pelos navegadores)
       audio.muted = true;
       audio.play().then(() => {
-        // Depois de iniciar, desmuta
         setTimeout(() => {
           audio.muted = false;
         }, 500);
@@ -68,7 +65,6 @@
         console.warn("Autoplay bloqueado, aguardando interação do usuário.");
       });
 
-      // Caso o autoplay falhe, ativa no primeiro clique
       const playAudio = () => {
         audio.muted = false;
         audio.play().catch(() => {});
@@ -81,10 +77,10 @@
     });
     const btn = document.getElementById('alert-btn');
   btn.addEventListener('click', () => {
-    // Navegar só depois de um pequeno delay para evitar conflito
+
     setTimeout(() => {
       window.location.href = 'video.html';
-    }, 50); // 50ms é suficiente
+    }, 50);
   });
   </script>
 </body>
