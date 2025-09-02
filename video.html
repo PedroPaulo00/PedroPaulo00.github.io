@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BILU TETEIA</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      max-height: 100vh;
+      object-fit: contain;
+    }
+
+    /* Botão de voltar */
+    .back-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <button class="back-btn" onclick="window.location.href='index.html'">⬅ Voltar</button>
+
+  <video controls autoplay playsinline>
+    <source src="videos/aiai.mp4" type="video/mp4">
+    <source src="videos/aiai.ogg" type="video/ogg">
+    Seu navegador não suporta vídeo.
+  </video>
+</body>
+</html>

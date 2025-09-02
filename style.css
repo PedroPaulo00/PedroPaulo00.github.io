@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Breach';
+    src: url(fonts/Breach\ Tour\ Subtext.ttf) format('truetype');
+}
+
+/* Reset leve */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: white;
+    background-image: url('imgs/background_site.jpg');
+    background-position: center;
+    background-size: cover;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+b {
+    color: greenyellow;
+}
+
+/* Wrapper */
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container centralizado */
+.container {
+    width: 90%;
+    max-width: 860px;
+    margin-inline: auto;
+    border: 2px solid white;
+    padding: 1em;
+    border-radius: 2em;
+}
+
+.container:hover {
+    border: 10px solid white;
+    transition: 1s;
+}
+
+/* Seções */
+section { padding-block: 20px; }
+
+/* Hero mobile-first */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+    gap: 16px;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 320px; /* tamanho padrão para celular */
+    height: auto;
+    object-fit: cover;
+}
+
+.title {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-size: 24px; /* tamanho base para celular */
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0;
+    animation: glow 1.5s infinite alternate;
+    font-family: 'Breach', sans-serif;
+}
+
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Glow dos títulos */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0;
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.507), 0 0 20px rgba(0, 255, 0, 0.507), 0 0 40px rgba(0, 255, 0, 0.507), 0 0 80px rgba(0, 255, 0, 0.507), 0 0 160px rgba(0, 255, 0, 0.507);
+    }
+}
+
+/* Texto longo */
+.prose {
+    max-width: 75%;
+    margin: 0 auto;
+    color: var(--fg);
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Cal-sans', sans-serif;
+}
+
+/* Botão de alerta com glow verde */
+.button {
+    background: rgb(42, 44, 42);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Breach', sans-serif;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Hover: glow verde + tremor */
+.button:hover {
+    background: rgb(60, 155, 23);
+    animation: glow-btn 0.6s infinite alternate, shake 0.3s infinite;
+    transform: scale(1.05);
+}
+
+/* Animação glow verde */
+@keyframes glow-btn {
+    0% { box-shadow: 0 0 10px #0f0, 0 0 20px #0f0; }
+    100% { box-shadow: 0 0 25px #0f0, 0 0 50px #0f0; }
+}
+
+/* Animação tremor */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+
+/* --- MEDIA QUERIES PARA TELAS MAIORES --- */
+@media (min-width: 600px) {
+    .hero img { max-width: 480px; }
+    .title { font-size: 36px; }
+    .prose { font-size: 17px; max-width: 70ch; }
+}
+
+@media (min-width: 900px) {
+    .hero img { max-width: 600px; }
+    .title { font-size: 48px; }
+    .prose { font-size: 18px; }
+}
+
+@media (min-width: 1200px) {
+    .hero img { max-width: 720px; }
+    .title { font-size: 64px; }
+}
+
+/* Responsividade botão mobile-first */
+@media (max-width: 600px) {
+    .button {
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}

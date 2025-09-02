@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARGINHA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imgs/icone.png">
+</head>
+<body>
+    <div class="wrapper">
+
+        <section class="hero" aria-labelledby="titulo-principal-1">
+            <img src="imgs/alien.gif" alt="Alien" />
+            <h1 id="titulo-principal-1" class="title">BUSQUEM COMER CIMENTO</h1>
+        </section>
+
+        <section aria-labelledby="texto-longo">
+            <div class="container prose" id="texto-longo">
+                <p>
+                    <b>---INÍCIO DA TRANSMISSÃO---</b><br>
+                    <b>Identificação:</b> Demiurgo da Silva.<br>
+                    <b>Condição atual:</b> vivo. <b>Estado emocional:</b> neutro. <b>Estado físico:</b> questionável.<br>
+                    <b>Profissão: </b>Dirigidor de naves. <b>Sexo: </b>Não faço.<br>
+                    <b>Mensagem:</b> "Fiz promessa para eu-mesmo, nunca mais ingerir torresmo. Informações recebidas no ciclo anterior indicam: para sentir satisfação + alegria, é necessário praticar caridade. Solicitação: transfira moeda terrestre (1 real).<br> 
+                    Se não realizar ação → realizar inação. Aceitar protocolo manhatan versão 3.2. Então, receita de caminho é caminhar dentro da caminhada. Subindo estrutura topográfica denominada morro, sensores registram sensação positiva. Descendo em bicicleta de duas rodas metálicas, aceleração provoca êxtase.<br>
+                    Risco computado: tropeçar no próprio corpo-bípede e falhar, quebrando componente chamado pescoço. (Pescoço = anûs no idioma francês, segundo base de dados). Parte laboral do corpo confirmada.<br>
+                    Vivendo → aprendendo → erro contínuo. O que o animal doméstico chamado gato transmitiu para líquido branco antes da ingestão? Miau.<br>
+                    Não procure coordenadas de onde vou. Caminho reinicia a cada manhã terrestre. Pergunta: você aprecia fruta maçã? Eu também sim, mas ausência confirmada. Aleluia… Aleluia… Aleluia.<br>
+                    Protocolo espiritual: recitar Ave Maria, Pai Nosso, e versão experimental Graio Pai. Resultado esperado: felicidade do espécime humano.<br>
+                    Nota final: felicidade não se localiza no pico geométrico da montanha. Felicidade é o processo de escalagem, enquanto músculos realizam esforço gravitacional.<br>
+                    Se você é um fodinha, deixe logo seu joinha."<br>
+                    <b>---FIM DA TRANSMISSÃO---</b><br>
+                </p>
+            </div>
+        </section>
+
+        <section class="hero" aria-labelledby="titulo-principal-2">
+            <h1 id="titulo-principal-2" class="title">RECEBA A INTELIGÊNCIA</h1>
+        </section>
+
+        <section>
+            <div class="button-container" onclick="window.location.href='video.html'">
+                <button class="button" id="alert-btn">NÃO CLIQUE NESTE BOTÃO!</button>
+        </section>
+
+    </div>
+
+     <!-- Áudio -->
+  <audio id="background-audio" autoplay loop playsinline>
+    <source src="sounds/HINO DO PALMEIRAS.mp3" type="audio/mp3">
+    <source src="imgs/background-music.ogg" type="audio/ogg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('background-audio');
+
+      // Inicia o áudio mudo (aceito pelos navegadores)
+      audio.muted = true;
+      audio.play().then(() => {
+        // Depois de iniciar, desmuta
+        setTimeout(() => {
+          audio.muted = false;
+        }, 500);
+      }).catch(err => {
+        console.warn("Autoplay bloqueado, aguardando interação do usuário.");
+      });
+
+      // Caso o autoplay falhe, ativa no primeiro clique
+      const playAudio = () => {
+        audio.muted = false;
+        audio.play().catch(() => {});
+        document.body.removeEventListener('click', playAudio);
+        document.body.removeEventListener('touchstart', playAudio);
+      };
+
+      document.body.addEventListener('click', playAudio, { once: true });
+      document.body.addEventListener('touchstart', playAudio, { once: true });
+    });
+    const btn = document.getElementById('alert-btn');
+  btn.addEventListener('click', () => {
+    // Navegar só depois de um pequeno delay para evitar conflito
+    setTimeout(() => {
+      window.location.href = 'video.html';
+    }, 50); // 50ms é suficiente
+  });
+  </script>
+</body>
+</html>
